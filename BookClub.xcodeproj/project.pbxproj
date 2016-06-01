@@ -21,6 +21,7 @@
 		B4C940D21CF7C34F00221458 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4C940D01CF7C34F00221458 /* Model.xcdatamodeld */; };
 		B4C940D51CF7C47000221458 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C940D31CF7C47000221458 /* Book+CoreDataProperties.swift */; };
 		B4C940D61CF7C47000221458 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C940D41CF7C47000221458 /* Book.swift */; };
+		BC5562FA1CFF4DC70016971E /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562F91CFF4DC70016971E /* AppearanceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		B4C940D11CF7C34F00221458 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B4C940D31CF7C47000221458 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Book+CoreDataProperties.swift"; path = "../Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B4C940D41CF7C47000221458 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = ../Book.swift; sourceTree = "<group>"; };
+		BC5562F91CFF4DC70016971E /* AppearanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C940CC1CF7C2E300221458 /* BookController.swift */,
+				BC5562F91CFF4DC70016971E /* AppearanceController.swift */,
 			);
 			name = ModelController;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				B4C940CF1CF7C2F700221458 /* Stack.swift in Sources */,
 				B4C940D51CF7C47000221458 /* Book+CoreDataProperties.swift in Sources */,
 				B4C940CB1CF7C2C000221458 /* ButtonTableViewCell.swift in Sources */,
+				BC5562FA1CFF4DC70016971E /* AppearanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +540,7 @@
 				B4C940BF1CF7C1C200221458 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4C940C01CF7C1C200221458 /* Build configuration list for PBXNativeTarget "BookClubTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +549,7 @@
 				B4C940C21CF7C1C200221458 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4C940C31CF7C1C200221458 /* Build configuration list for PBXNativeTarget "BookClubUITests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +558,7 @@
 				B4C940C51CF7C1C200221458 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
