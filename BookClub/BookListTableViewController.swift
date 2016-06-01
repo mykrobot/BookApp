@@ -95,7 +95,7 @@ class BookListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return self.view.frame.height / 9 - 6
+        return self.view.frame.height / 9 - 7
       
     }
  

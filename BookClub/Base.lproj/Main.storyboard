@@ -51,7 +51,6 @@
                                                 <constraint firstAttribute="height" constant="51" id="R1p-gZ-HwS"/>
                                                 <constraint firstAttribute="width" secondItem="7zD-vf-09E" secondAttribute="height" multiplier="1:1" id="rO0-D3-nTN"/>
                                             </constraints>
-                                            <state key="normal" image="OpenBook_Icon"/>
                                             <connections>
                                                 <action selector="buttonTapped:" destination="7ei-qH-QiG" eventType="touchUpInside" id="hFd-DD-V3m"/>
                                             </connections>
@@ -224,7 +223,4 @@
             <point key="canvasLocation" x="677" y="543"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="OpenBook_Icon" width="57" height="51"/>
-    </resources>
 </document>

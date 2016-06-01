@@ -36,9 +36,9 @@ class ButtonTableViewCell: UITableViewCell {
     
     func bookReadValueChanged(value: Bool) {
         if value == true {
-            button.imageView?.image = UIImage(named: "ClosedBook_Icon")
+            button.setBackgroundImage(UIImage(named: "ClosedBook_Icon"), forState: .Normal)
         } else {
-            button.imageView?.image = UIImage(named: "OpenBook_Icon")
+            button.setBackgroundImage(UIImage(named: "OpenBook_Icon"), forState: .Normal)
         }
     }
     
