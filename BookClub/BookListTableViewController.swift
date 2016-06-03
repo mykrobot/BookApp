@@ -20,11 +20,6 @@ class BookListTableViewController: UITableViewController {
         BookController.sharedController.fetchedResultsController.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Action Buttons
     
     @IBAction func addButtonTapped(sender: AnyObject) {
@@ -93,6 +88,7 @@ class BookListTableViewController: UITableViewController {
             return "Read 'Em Dead"
         }
     }
+<<<<<<< 15ad38bfec9ceae8ce0715efced8b2a3e55f4c15
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return self.view.frame.height / 9 - 7
@@ -107,44 +103,17 @@ class BookListTableViewController: UITableViewController {
         return true
     }
     */
+=======
+>>>>>>> cleaned up code. added delete.
 
-    /*
-    // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            guard let book = BookController.sharedController.fetchedResultsController.objectAtIndexPath(indexPath) as? Book else {
+                return
+            }
+            BookController.sharedController.removeBook(book)
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension BookListTableViewController: BookTableViewCellDelegate {
