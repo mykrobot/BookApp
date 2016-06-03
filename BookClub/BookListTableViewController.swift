@@ -11,15 +11,18 @@ import CoreData
 
 class BookListTableViewController: UITableViewController {
     
-    override func viewWillAppear(animated: Bool) {
-        tableViewDesign()
-    }
-
+    // MARK: - VC Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         BookController.sharedController.fetchedResultsController.delegate = self
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableViewDesign()
+    }
+    
     // MARK: - Action Buttons
     
     @IBAction func addButtonTapped(sender: AnyObject) {
@@ -29,10 +32,8 @@ class BookListTableViewController: UITableViewController {
     //MARK: - Alert Controller
     
     func presentAlertController() {
-        
         var bookTextField: UITextField?
         var authorTextField: UITextField?
-        
         let alertController = UIAlertController(title: "Add New Book", message: "What book would you just love to read next?", preferredStyle: .Alert)
         alertController.addTextFieldWithConfigurationHandler { (textField) in
             textField.placeholder = "Book Title..."
@@ -49,30 +50,27 @@ class BookListTableViewController: UITableViewController {
         }
         alertController.addAction(cancelAction)
         alertController.addAction(createAction)
-        
         presentViewController(alertController, animated: true, completion: nil)
-        
-        
     }
     
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         guard let sections = BookController.sharedController.fetchedResultsController.sections else {return 0}
         return sections.count
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let sections = BookController.sharedController.fetchedResultsController.sections else {return 0}
+        guard let sections = BookController.sharedController.fetchedResultsController.sections else {
+            return 0
+        }
         return sections[section].numberOfObjects
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCellWithIdentifier("bookCell", forIndexPath: indexPath) as? ButtonTableViewCell,
-         book = BookController.sharedController.fetchedResultsController.objectAtIndexPath(indexPath) as? Book else {
-            return UITableViewCell()
+            book = BookController.sharedController.fetchedResultsController.objectAtIndexPath(indexPath) as? Book else {
+                return UITableViewCell()
         }
         cell.updateWithBook(book)
         cell.delegate = self
@@ -83,29 +81,16 @@ class BookListTableViewController: UITableViewController {
         guard let sections = BookController.sharedController.fetchedResultsController.sections else {return nil}
         let value = Int(sections[section].name)
         if value == 0 {
-            return "Need To Read"
+            return "Potential Advertures"
         } else {
-            return "Read 'Em Dead"
+            return "Previous Adventures"
         }
     }
-<<<<<<< 15ad38bfec9ceae8ce0715efced8b2a3e55f4c15
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return self.view.frame.height / 9 - 7
-      
     }
- 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-=======
->>>>>>> cleaned up code. added delete.
-
+    
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             guard let book = BookController.sharedController.fetchedResultsController.objectAtIndexPath(indexPath) as? Book else {
@@ -113,16 +98,6 @@ class BookListTableViewController: UITableViewController {
             }
             BookController.sharedController.removeBook(book)
         }
-    }
-}
-
-extension BookListTableViewController: BookTableViewCellDelegate {
-    func buttonCellButtonTapped(cell: ButtonTableViewCell) {
-        guard let indexPath = tableView.indexPathForCell(cell),
-        book = BookController.sharedController.fetchedResultsController.objectAtIndexPath(indexPath) as? Book else { return }
-        book.didRead = !book.didRead.boolValue
-        cell.bookReadValueChanged(book.didRead.boolValue)
-        BookController.sharedController.saveToPersistentStorage()
     }
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -135,6 +110,16 @@ extension BookListTableViewController: BookTableViewCellDelegate {
         header.textLabel?.textColor=title.textColor
         header.textLabel?.textAlignment = .Center
         header.backgroundView?.backgroundColor = UIColor(red: 46/255.0, green: 46/255.0, blue: 46/255.0, alpha: 1)
+    }
+}
+
+extension BookListTableViewController: BookTableViewCellDelegate {
+    func buttonCellButtonTapped(cell: ButtonTableViewCell) {
+        guard let indexPath = tableView.indexPathForCell(cell),
+            book = BookController.sharedController.fetchedResultsController.objectAtIndexPath(indexPath) as? Book else { return }
+        book.didRead = !book.didRead.boolValue
+        cell.bookReadValueChanged(book.didRead.boolValue)
+        BookController.sharedController.saveToPersistentStorage()
     }
 }
 
@@ -183,7 +168,6 @@ extension BookListTableViewController {
         let backgroundImage = UIImage(named: "Library_BG")
         let imageView = UIImageView(image: backgroundImage)
         tableView.backgroundView = imageView
-        
     }
 }
 

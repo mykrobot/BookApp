@@ -18,14 +18,7 @@ class ButtonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         cellDesign()
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func updateWithBook(book: Book) {
@@ -46,9 +39,7 @@ class ButtonTableViewCell: UITableViewCell {
     
     @IBAction func buttonTapped(sender: AnyObject) {
         delegate?.buttonCellButtonTapped(self)
-        
     }
-
 }
 
 extension ButtonTableViewCell {
@@ -56,7 +47,6 @@ extension ButtonTableViewCell {
         self.backgroundColor = UIColor.clearColor()
         self.primaryLabel.textColor = UIColor.whiteColor()
         self.secondaryLabel.textColor = UIColor.whiteColor()
-        
     }
 }
 
