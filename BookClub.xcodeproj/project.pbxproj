@@ -246,6 +246,7 @@
 				TargetAttributes = {
 					B4C940941CF7C1C200221458 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = G68TN4S97G;
 					};
 					B4C940A81CF7C1C200221458 = {
 						CreatedOnToolsVersion = 7.3;
@@ -461,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BookClub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMecham.BookClub;
@@ -472,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BookClub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMecham.BookClub;
