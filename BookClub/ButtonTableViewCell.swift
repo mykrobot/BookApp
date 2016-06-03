@@ -19,6 +19,7 @@ class ButtonTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cellDesign()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -35,9 +36,9 @@ class ButtonTableViewCell: UITableViewCell {
     
     func bookReadValueChanged(value: Bool) {
         if value == true {
-            button.imageView?.image = UIImage(named: "hasRead")
+            button.setBackgroundImage(UIImage(named: "ClosedBook_Icon"), forState: .Normal)
         } else {
-            button.imageView?.image = UIImage(named: "toRead")
+            button.setBackgroundImage(UIImage(named: "OpenBook_Icon"), forState: .Normal)
         }
     }
     
@@ -48,6 +49,15 @@ class ButtonTableViewCell: UITableViewCell {
         
     }
 
+}
+
+extension ButtonTableViewCell {
+    func cellDesign() {
+        self.backgroundColor = UIColor.clearColor()
+        self.primaryLabel.textColor = UIColor.whiteColor()
+        self.secondaryLabel.textColor = UIColor.whiteColor()
+        
+    }
 }
 
 protocol BookTableViewCellDelegate: class {

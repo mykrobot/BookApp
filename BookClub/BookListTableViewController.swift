@@ -10,6 +10,10 @@ import UIKit
 import CoreData
 
 class BookListTableViewController: UITableViewController {
+    
+    override func viewWillAppear(animated: Bool) {
+        tableViewDesign()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +93,11 @@ class BookListTableViewController: UITableViewController {
             return "Read 'Em Dead"
         }
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return self.view.frame.height / 9 - 7
+      
+    }
  
 
     /*
@@ -146,6 +155,18 @@ extension BookListTableViewController: BookTableViewCellDelegate {
         cell.bookReadValueChanged(book.didRead.boolValue)
         BookController.sharedController.saveToPersistentStorage()
     }
+    
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let title = UILabel()
+        title.font = UIFont(name: "AvenirNext-Bold", size: 20)
+        title.textColor = UIColor.whiteColor()
+        
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font=title.font
+        header.textLabel?.textColor=title.textColor
+        header.textLabel?.textAlignment = .Center
+        header.backgroundView?.backgroundColor = UIColor(red: 46/255.0, green: 46/255.0, blue: 46/255.0, alpha: 1)
+    }
 }
 
 extension BookListTableViewController: NSFetchedResultsControllerDelegate {
@@ -185,6 +206,15 @@ extension BookListTableViewController: NSFetchedResultsControllerDelegate {
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         tableView.endUpdates()
+    }
+}
+
+extension BookListTableViewController {
+    func tableViewDesign() {
+        let backgroundImage = UIImage(named: "Library_BG")
+        let imageView = UIImageView(image: backgroundImage)
+        tableView.backgroundView = imageView
+        
     }
 }
 
