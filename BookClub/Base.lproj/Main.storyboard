@@ -24,12 +24,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubz-bl-x9l">
-                                            <rect key="frame" x="8" y="6" width="240" height="28"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dT-AG-7aF">
                                             <rect key="frame" x="8" y="38" width="240" height="20"/>
                                             <constraints>
@@ -55,10 +49,17 @@
                                                 <action selector="buttonTapped:" destination="7ei-qH-QiG" eventType="touchUpInside" id="hFd-DD-V3m"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubz-bl-x9l">
+                                            <rect key="frame" x="8" y="6" width="240" height="28"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="7zD-vf-09E" secondAttribute="trailing" constant="8" id="2l4-0h-Dz8"/>
                                         <constraint firstItem="1dT-AG-7aF" firstAttribute="top" secondItem="ubz-bl-x9l" secondAttribute="bottom" constant="4" id="BfT-83-J6g"/>
+                                        <constraint firstAttribute="bottom" secondItem="7zD-vf-09E" secondAttribute="bottom" constant="3" id="JgR-eg-2gk"/>
                                         <constraint firstItem="7zD-vf-09E" firstAttribute="leading" secondItem="ubz-bl-x9l" secondAttribute="trailing" constant="13" id="TJG-94-iln"/>
                                         <constraint firstAttribute="bottom" secondItem="1dT-AG-7aF" secondAttribute="bottom" constant="2" id="TX1-Sv-8Fj"/>
                                         <constraint firstItem="ubz-bl-x9l" firstAttribute="top" secondItem="XJ5-E9-GbC" secondAttribute="top" constant="2" id="WqG-HA-FNg"/>
