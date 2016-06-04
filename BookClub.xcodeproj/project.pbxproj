@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B422C8D91D028225006BF97F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422C8D81D028225006BF97F /* SnapshotHelper.swift */; };
 		B4C940991CF7C1C200221458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C940981CF7C1C200221458 /* AppDelegate.swift */; };
 		B4C9409E1CF7C1C200221458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C9409C1CF7C1C200221458 /* Main.storyboard */; };
 		B4C940A01CF7C1C200221458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C9409F1CF7C1C200221458 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B422C8D81D028225006BF97F /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		B4C940951CF7C1C200221458 /* BookClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C940981CF7C1C200221458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C9409D1CF7C1C200221458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C940B81CF7C1C200221458 /* BookClubUITests.swift */,
+				B422C8D81D028225006BF97F /* SnapshotHelper.swift */,
 				B4C940BA1CF7C1C200221458 /* Info.plist */,
 			);
 			path = BookClubUITests;
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C940B91CF7C1C200221458 /* BookClubUITests.swift in Sources */,
+				B422C8D91D028225006BF97F /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

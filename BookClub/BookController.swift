@@ -31,10 +31,10 @@ class BookController {
         saveToPersistentStorage()
     }
     
-    func updateBook(book: Book, summary: String) {
-        book.summary = summary
-        saveToPersistentStorage()
-    }
+//    func updateBook(book: Book, summary: String) {
+//        book.summary = summary
+//        saveToPersistentStorage()
+//    }
     
     func removeBook(book: Book) {
         let moc = Stack.sharedStack.managedObjectContext

@@ -13,6 +13,9 @@ class BookClubUITests: XCTestCase {
     override func setUp() {
         super.setUp()
         
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
@@ -29,8 +32,9 @@ class BookClubUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        XCUIApplication().tables.staticTexts["Harry Potter and the Deathly Hallows"].tap()
+        snapshot("1Book")
     }
     
 }
