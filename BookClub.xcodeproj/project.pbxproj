@@ -21,6 +21,8 @@
 		B4C940D21CF7C34F00221458 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4C940D01CF7C34F00221458 /* Model.xcdatamodeld */; };
 		B4C940D51CF7C47000221458 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C940D31CF7C47000221458 /* Book+CoreDataProperties.swift */; };
 		B4C940D61CF7C47000221458 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C940D41CF7C47000221458 /* Book.swift */; };
+		B4F082AA1D53F15B00D0210E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F082A91D53F15B00D0210E /* Session.swift */; };
+		B4F082AE1D53F16F00D0210E /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F082AD1D53F16F00D0210E /* NetworkController.swift */; };
 		BC5562FA1CFF4DC70016971E /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5562F91CFF4DC70016971E /* AppearanceController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		B4C940D11CF7C34F00221458 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B4C940D31CF7C47000221458 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Book+CoreDataProperties.swift"; path = "../Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B4C940D41CF7C47000221458 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = ../Book.swift; sourceTree = "<group>"; };
+		B4F082A91D53F15B00D0210E /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B4F082AD1D53F16F00D0210E /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		BC5562F91CFF4DC70016971E /* AppearanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B40FAFAC1D54021E005A2E36 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				B4F082A91D53F15B00D0210E /* Session.swift */,
+				B4F082AD1D53F16F00D0210E /* NetworkController.swift */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
 		B4A3DB201D012E930021E3BD /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C940981CF7C1C200221458 /* AppDelegate.swift */,
+				B40FAFAC1D54021E005A2E36 /* Analytics */,
 				B4A3DB201D012E930021E3BD /* HelperFiles */,
 				B4C940D71CF7C49600221458 /* Model */,
 				B4C940D81CF7C4A400221458 /* ModelController */,
@@ -313,12 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F082AA1D53F15B00D0210E /* Session.swift in Sources */,
 				B4C940C71CF7C21500221458 /* BookListTableViewController.swift in Sources */,
 				B4C940CD1CF7C2E300221458 /* BookController.swift in Sources */,
 				B4C940D21CF7C34F00221458 /* Model.xcdatamodeld in Sources */,
 				B4C940991CF7C1C200221458 /* AppDelegate.swift in Sources */,
 				B4C940D61CF7C47000221458 /* Book.swift in Sources */,
 				B4C940CF1CF7C2F700221458 /* Stack.swift in Sources */,
+				B4F082AE1D53F16F00D0210E /* NetworkController.swift in Sources */,
 				B4C940D51CF7C47000221458 /* Book+CoreDataProperties.swift in Sources */,
 				B4C940CB1CF7C2C000221458 /* ButtonTableViewCell.swift in Sources */,
 				BC5562FA1CFF4DC70016971E /* AppearanceController.swift in Sources */,
